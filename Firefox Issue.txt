@@ -1,0 +1,175 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Assignment 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Assignment ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Selenium\Alation Assignment\Assignment\Assignment\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ Assignment ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Assignment ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory E:\Selenium\Alation Assignment\Assignment\Assignment\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ Assignment ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Assignment ---
+[INFO] Surefire report directory: E:\Selenium\Alation Assignment\Assignment\Assignment\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running Alation.Assignment.AppTest
+Feature: Alation Assignment
+1533444305511	geckodriver	INFO	geckodriver 0.21.0 (c7d3022be6420de1ca4076d932aa32b299f3ea10 2018-06-14)
+1533444305564	geckodriver	INFO	Listening on 127.0.0.1:36275
+1533444306910	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Balu\\AppData\\Local\\Temp\\rust_mozprofile.TJntVy5DAj9C"
+[Parent 5812, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5528, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1533444329020	Marionette	INFO	Listening on port 50079
+1533444329357	Marionette	WARN	TLS certificate errors will be ignored for this session
+Aug 05, 2018 10:15:30 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+
+  Scenario: Get the book details from amazon              [90m# src/test/resource/alation.feature:3[0m
+    [32mGiven [0m[32mLaunch Amazon website "[0m[32m[1mhttps://www.amazon.com/[0m[32m"[0m [90m# StepDefinitions.launch_Amazon_website(String)[0m
+    [31mWhen [0m[31mSelect "[0m[31m[1mBooks[0m[31m" from the category[0m                 [90m# StepDefinitions.select_from_the_category(String)[0m
+      [31morg.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
+      Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+      System info: host: 'BALU-PC', ip: '172.20.10.9', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_172'
+      Driver info: org.openqa.selenium.firefox.FirefoxDriver
+      Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5812, moz:profile: C:\Users\Balu\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+      Session ID: 3035adfe-18c8-4586-9c62-7fef680929df
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+      	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+      	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+      	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+      	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+      	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+      	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+      	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+      	at Alation.Assignment.StepDefinitions.select_from_the_category(StepDefinitions.java:59)
+      	at ?.When Select "Books" from the category(src/test/resource/alation.feature:5)
+      [0m
+    [36mAnd [0m[36mSearch for "[0m[36m[1mdata catalog[0m[36m"[0m                         [90m# StepDefinitions.search_for(String)[0m
+    [36mAnd [0m[36mOpen the first result of the page[0m                 [90m# StepDefinitions.open_the_first_result_of_the_page()[0m
+    [36mThen [0m[36mRecord details of that product[0m                   [90m# StepDefinitions.record_details_of_that_product()[0m
+    [36mAnd [0m[36mClose the browser[0m                                 [90m# StepDefinitions.close_the_browser()[0m
+
+[31mFailed scenarios:[0m
+[31msrc/test/resource/alation.feature:3 [0m# Scenario: Get the book details from amazon
+
+1 Scenarios ([31m1 failed[0m)
+6 Steps ([31m1 failed[0m, [36m4 skipped[0m, [32m1 passed[0m)
+0m45.708s
+
+org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'BALU-PC', ip: '172.20.10.9', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_172'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5812, moz:profile: C:\Users\Balu\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 3035adfe-18c8-4586-9c62-7fef680929df
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+	at Alation.Assignment.StepDefinitions.select_from_the_category(StepDefinitions.java:59)
+	at ?.When Select "Books" from the category(src/test/resource/alation.feature:5)
+
+Tests run: 7, Failures: 0, Errors: 2, Skipped: 4, Time elapsed: 46.261 sec <<< FAILURE!
+When Select "Books" from the category(Scenario: Get the book details from amazon)  Time elapsed: 0.004 sec  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'BALU-PC', ip: '172.20.10.9', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_172'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5812, moz:profile: C:\Users\Balu\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 3035adfe-18c8-4586-9c62-7fef680929df
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+	at Alation.Assignment.StepDefinitions.select_from_the_category(StepDefinitions.java:59)
+	at ?.When Select "Books" from the category(src/test/resource/alation.feature:5)
+
+Scenario: Get the book details from amazon  Time elapsed: 0.005 sec  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: Element <option> could not be scrolled into view
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'BALU-PC', ip: '172.20.10.9', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_172'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 61.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 5812, moz:profile: C:\Users\Balu\AppData\Local..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: XP, platformName: XP, platformVersion: 6.1, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 3035adfe-18c8-4586-9c62-7fef680929df
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:324)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:120)
+	at Alation.Assignment.StepDefinitions.select_from_the_category(StepDefinitions.java:59)
+	at ?.When Select "Books" from the category(src/test/resource/alation.feature:5)
+
+
+Results :
+
+Tests in error: 
+  When Select "Books" from the category(Scenario: Get the book details from amazon): Element <option> could not be scrolled into view(..)
+  Scenario: Get the book details from amazon: Element <option> could not be scrolled into view(..)
+
+Tests run: 7, Failures: 0, Errors: 2, Skipped: 4
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 53.202 s
+[INFO] Finished at: 2018-08-05T10:15:49+05:30
+[INFO] Final Memory: 8M/21M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project Assignment: There are test failures.
+[ERROR] 
+[ERROR] Please refer to E:\Selenium\Alation Assignment\Assignment\Assignment\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
